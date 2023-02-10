@@ -11,6 +11,7 @@ import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from 'components/two-colum
 
 import ConvertBody from 'components/convert-body'
 import PostCategories from 'components/post-categories'
+import Pagination from 'components/pagination'
 import Image from 'next/legacy/image'
 import { getPlaiceholder } from 'plaiceholder'
 
@@ -60,8 +61,12 @@ export default function Post({
             <PostCategories categories={categories} />
           </TwoColumnSidebar>
         </TwoColumn>
-        <div>{prevPost.title} {prevPost.slug}</div>
-        <div>{nextPost.title} {nextPost.slug}</div>
+        <Pagination
+          prevText={prevPost.title}
+          prevUrl={`/blog/${prevPost.slug}`}
+          nextText={nextPost.title}
+          nextUrl={`/blog/${nextPost.slug}`}
+        />
       </article>
     </Container>
   )
