@@ -17,6 +17,7 @@ export default function Posts ({ posts }) {
                 height={eyecatch.height}
                 placeholder='blur'
                 blurDataURL={eyecatch.blurDataURL}
+                blurDataUrl={eyecatch.blurDataUrl}
               />
             </figure>
             <h2>{title}</h2>

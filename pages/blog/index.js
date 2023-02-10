@@ -4,7 +4,6 @@ import Container from 'components/container'
 import Hero from 'components/hero'
 import Posts from 'components/posts'
 import { getPlaiceholder } from 'plaiceholder'
-
 import { eyecatchLocal } from 'lib/constants'
 
 export default function Blog ({ posts }) {
